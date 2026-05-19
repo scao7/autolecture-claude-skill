@@ -15,7 +15,7 @@ compile, download the mp4.
 # old folder first to avoid two copies loading:
 rm -rf ~/.claude/skills/autolecture-demo
 
-git clone https://github.com/scao7/autolecture-claude-skill.git ~/.claude/skills/autolecture-claude-skill
+git clone https://github.com/scao7/autolecture-claude-skill.git ~/.claude/skills/autolecture-skill
 ```
 
 ### 2. Install the SDK (always required)

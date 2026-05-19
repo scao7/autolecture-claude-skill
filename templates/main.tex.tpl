@@ -1,4 +1,4 @@
-% {{PROJECT_TITLE}} —— autolecture-claude-skill 生成
+% {{PROJECT_TITLE}} —— autolecture-skill 生成
 % Mode: {{MODE}}        (rough / polished / text)
 % Source audio: {{AUDIO_FILE}}    (omit for text mode)
 % Generated scenes: {{N_SCENES}}
