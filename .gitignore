@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+# Work-dir outputs the scripts produce (when run with `--work .`):
+project.zip
+out.mp4
+beat_plan.md
+*.whisper.json
