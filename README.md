@@ -6,21 +6,50 @@ Claude Code skill that turns a script / audio recording / podcast
 project, upload it via the [Python SDK](https://github.com/scao7/autolecture-python),
 compile, download the mp4.
 
-## Install (3 steps)
+## Install
+
+### 1. Drop the skill into `~/.claude/skills/`
 
 ```bash
-# 1. Drop the skill into ~/.claude/skills/
-#    If you used the predecessor scao7/autolecture-skill (folder name
-#    "autolecture-demo"), remove it first to avoid two copies loading:
-#       rm -rf ~/.claude/skills/autolecture-demo
+# If you used the predecessor scao7/autolecture-skill, remove the
+# old folder first to avoid two copies loading:
+rm -rf ~/.claude/skills/autolecture-demo
+
 git clone https://github.com/scao7/autolecture-claude-skill.git ~/.claude/skills/autolecture-claude-skill
+```
 
-# 2. Install the SDK + a few helper deps
-pip install autolecture openai-whisper pdfplumber Pillow
-#    (also need on PATH: ffmpeg, pdftoppm, git — system packages)
+### 2. Install the SDK (always required)
 
-# 3. Mint an API key at https://autolecture.ai/account → 🔑 API Keys
-#    → "Generate API key". Copy immediately — shown ONCE.
+```bash
+pip install autolecture
+```
+
+That's enough for the **text-script → video** and **audio → video**
+flows when you let the server transcribe the audio (the default
+behavior for short clips).
+
+### 3. (Optional) Install per-scenario extras
+
+The skill's helper scripts only run when their use case applies, and
+each guards its own dependency at runtime — so install only what you'll
+use:
+
+| Scenario | `pip install` | system binaries |
+|---|---|---|
+| Local Whisper (faster iteration, no upload) | `openai-whisper` | `ffmpeg` |
+| PDF paper with figure callouts | `pdfplumber Pillow` | `pdftoppm` |
+| GitHub repo demo (sparse-clone screenshots) | — | `git` |
+
+System binaries come from your package manager — e.g. on Ubuntu:
+`sudo apt install ffmpeg poppler-utils git` (`poppler-utils` provides
+`pdftoppm`). On macOS: `brew install ffmpeg poppler git`.
+
+### 4. Mint an API key
+
+<https://autolecture.ai/account> → 🔑 **API Keys** → **Generate API key**.
+Copy immediately — the secret is shown ONCE.
+
+```bash
 export AUTOLECTURE_API_KEY='al_live_…'
 ```
 
