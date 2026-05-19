@@ -13,10 +13,19 @@ compile, download the mp4.
 git clone https://github.com/scao7/autolecture-claude-skill.git ~/.claude/skills/autolecture-claude-skill
 
 # 2. Install the SDK + a few helper deps
-pip install autolecture openai-whisper pdfplumber Pillow
+#    (the SDK isn't on PyPI yet — install straight from GitHub for now)
+pip install git+https://github.com/scao7/autolecture-python.git
+pip install openai-whisper pdfplumber Pillow
 #    (also need on PATH: ffmpeg, pdftoppm, git — system packages)
 
-# 3. Mint an API key at https://autolecture.ai/account → API Keys → Generate
+# 3. Mint an API key. The Account-page UI isn't wired yet, so for the
+#    bootstrap user, sign in at https://autolecture.ai and run:
+#
+#      curl -X POST -H "Authorization: Bearer <YOUR_JWT_FROM_BROWSER>" \
+#        https://autolecture.ai/api/v2/me/api-key
+#
+#    (Grab the JWT from devtools → Application → localStorage → al_token.)
+#    Copy the `api_key` field of the response — it's only shown once.
 export AUTOLECTURE_API_KEY='al_live_…'
 ```
 
