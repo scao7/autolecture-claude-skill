@@ -1,4 +1,4 @@
-# 视觉调色板 + 字体（autolecture-demo 默认）
+# 视觉调色板 + 字体（autolecture-claude-skill 默认）
 
 ## 调色板
 

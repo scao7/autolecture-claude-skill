@@ -10,7 +10,7 @@ compile, download the mp4.
 
 ```bash
 # 1. Drop the skill into ~/.claude/skills/
-git clone https://github.com/scao7/autolecture-claude-skill.git ~/.claude/skills/autolecture-demo
+git clone https://github.com/scao7/autolecture-claude-skill.git ~/.claude/skills/autolecture-claude-skill
 
 # 2. Install the SDK + a few helper deps
 pip install autolecture openai-whisper pdfplumber Pillow

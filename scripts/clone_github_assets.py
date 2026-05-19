@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pull images + README from a GitHub repo for autolecture-demo.
+"""Pull images + README from a GitHub repo for autolecture-claude-skill.
 
 Sparse-checkout strategy: shallow clone with `--filter=blob:none` then
 selectively materialize only image files. Avoids pulling node_modules,

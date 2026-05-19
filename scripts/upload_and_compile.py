@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Upload a generated work-dir to AutoLecture, compile, download mp4.
 
-Run this as the LAST step of the autolecture-demo skill — it replaces
+Run this as the LAST step of the autolecture-claude-skill skill — it replaces
 the old manual "drag zip to autolecture.ai → click Recompile" loop:
 
     AUTOLECTURE_API_KEY=al_live_... python upload_and_compile.py /path/to/workdir

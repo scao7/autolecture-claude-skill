@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Extract figures from a PDF for autolecture-demo.
+"""Extract figures from a PDF for autolecture-claude-skill.
 
 **Default: figures only.** We render each page to a tempdir (needed as
 the source for cropping), crop every detected figure into the output

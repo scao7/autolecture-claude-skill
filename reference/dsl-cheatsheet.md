@@ -1,4 +1,4 @@
-# VideoTeX DSL 速查（autolecture-demo 用）
+# VideoTeX DSL 速查（autolecture-claude-skill 用）
 
 ## 文档结构
 

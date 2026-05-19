@@ -1,9 +1,9 @@
 ---
-name: autolecture-demo
-description: 用户给一段口播音频 / 已录好的播客 / 或纯文字脚本（可选附加 PDF 论文 / GitHub repo），端到端生成一个可直接在 AutoLecture (https://autolecture.ai) 里编译出片的项目包 — main.tex + scenes/ 手写源码 + 资源清单。所有视觉用 \\manimFile / \\htmlFile / \\remotionFile 引外部源码（**不走 LLM 提示词**），AI 仅用于 \\image[engine=gemini]{} 生图。PDF 图表 / repo 截图按音频内容 match 到对应 view（含 zoom-in / crop / annotate 效果，全部 HTML 或 Remotion 实现）。目标：用户解压 → 拖进项目 → 点 Recompile → 视频即出。
+name: autolecture-claude-skill
+description: 用户给一段口播音频 / 已录好的播客 / 或纯文字脚本（可选附加 PDF 论文 / GitHub repo），端到端生成一个 AutoLecture (https://autolecture.ai) 项目并用 `autolecture` SDK 直接上传 + 编译 + 下载 mp4。所有视觉用 \\manimFile / \\htmlFile / \\remotionFile 手写源码（**不走 LLM 提示词**），AI 仅用于 \\image[engine=gemini]{} 生图。PDF 图表 / repo 截图按音频内容 match 到对应 view（含 zoom-in / crop / annotate 效果，全部 HTML 或 Remotion 实现）。目标：用户提供素材 → Claude 跑完 → out.mp4 + Studio URL。
 ---
 
-# autolecture-demo
+# autolecture-claude-skill
 
 把"一段随手录的乱口播 / 一段成品播客 / 一段文字稿"变成可立即在 AutoLecture 里点 ▶ Recompile 出片的项目包。
 
